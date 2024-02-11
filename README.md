@@ -1,4 +1,4 @@
-#CARA MEMBUAT USER ROOT VPS
+# CARA MEMBUAT USER ROOT VPS
 ## *Langkah Pertama masuk ke mode `root`.*
 cmd 👉 <pre><code>sudo su</code></pre>
 
