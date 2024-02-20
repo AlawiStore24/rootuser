@@ -17,3 +17,15 @@ usermod -aG sudo $newuser
 usermod -aG sudo $newuser
 
 echo "User baru telah berhasil dibuat"
+
+
+# Buat salinan cadangan dari file konfigurasi SSH
+cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
+
+# Ubah pengaturan pada file konfigurasi SSH untuk mengizinkan login user root
+sed -i 's/PermitRootLogin no/PermitRootLogin yes/g' /etc/ssh/sshd_config
+
+# Lakukan restart layanan SSH untuk menerapkan perubahan
+systemctl restart sshd
+
+echo "Konfigurasi SSH telah diubah. Sekarang Anda dapat login menggunakan user root."
