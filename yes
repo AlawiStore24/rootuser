@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Pastikan script dijalankan sebagai root
+if [ "$EUID" -ne 0 ]
+  then echo "Silakan jalankan script ini sebagai root"
+  exit
+fi
+
+# Buat password user root tanpa konfirmasi dan terlihat
+echo "root:password" | chpasswd
+
+# Ubah pengaturan pada file konfigurasi SSH untuk mengizinkan login user root
+sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
+
+sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/g' /etc/ssh/sshd_config
+
+# Lakukan restart layanan SSH untuk menerapkan perubahan
+systemctl restart sshd
+
+echo "Konfigurasi SSH telah diubah. Password user root telah diubah dan Anda dapat login menggunakan user root."
