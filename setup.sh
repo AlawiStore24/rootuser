@@ -31,14 +31,7 @@ if [ $(id -u) -eq 0 ]; then
     echo "User kamu sudah root"
     sleep 3
     clear
-    #update & upgrade
-    apt update -y && apt upgrade -y
-    #install curl untuk melihat ip vps
-    apt install curl -y
-    ip vps kamu = $ipvps
-    apt install curl -y
-    clear
-    # Ubah password roo
+    # Ubah password root
     echo ""
     echo -e "
 ${b}╔═══════════════════════════════════════════════╗
@@ -73,14 +66,13 @@ ${b}╔════════════════════════�
 ╔═══════════════════════════════════════════════╗
 ║           ${h}DETAIL NEW PASSWORD ROOT            ${b}║
 ╠═══════════════════════════════════════════════╝
-║ • ${nc}IP VPS        = $ipvps
-${b}║
 ║ • ${nc}Password root = $newpassword
 ${b}║
-║ • ${nc}Simpan detail ini
+║ • ${nc}Silahkan login dengan user ${h}root ${nc} ya!
 ${b}╚════════════════════════════════════════════════${nc}"
     echo -e ""
 
 else
-    echo "User is not root"
+    clear
+    echo -e "${org}User kamu bukan root ${nc}silahkan ketik ${h}sudo su"
 fi
