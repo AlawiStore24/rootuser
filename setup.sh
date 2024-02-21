@@ -54,6 +54,8 @@ ${b}╔════════════════════════�
     # Ubah isi dari sshd_config
     sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
     sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/g' /etc/ssh/sshd_config
+    #restrat sshd service
+    systemctl restart sshd
     clear
     #hasil akhir
     clear
