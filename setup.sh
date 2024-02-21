@@ -71,8 +71,9 @@ ${b}║
 ║ • ${nc}Silahkan login dengan user ${h}root ${nc} ya!
 ${b}╚════════════════════════════════════════════════${nc}"
     echo -e ""
-
+    rm -rf setup.sh
 else
     clear
     echo -e "${org}User kamu bukan root ${nc}silahkan ketik ${h}sudo su"
+    rm -rf setup.sh
 fi
