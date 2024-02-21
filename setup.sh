@@ -38,7 +38,6 @@ if [ $(id -u) -eq 0 ]; then
     sudo apt install curl -y
     clear
     echo "Curl telah berhasil diinstal."
-}
     clear
     # Ubah password roo
     echo ""
