@@ -56,7 +56,6 @@ ${b}╔════════════════════════�
     sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/g' /etc/ssh/sshd_config
     clear
     #hasil akhir
-    apt install curl -y
     clear
     echo ""
     echo -e "
