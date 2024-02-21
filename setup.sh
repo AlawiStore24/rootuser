@@ -34,10 +34,7 @@ if [ $(id -u) -eq 0 ]; then
     #install curl untuk melihat ip vps
     apt install curl -y
     clear
-    echo "Curl telah berhasil diinstal."
-    clear
-    #update & upgrade dulu
-    apt update -y && apt upgrade -y
+    apt install curl -y
     clear
     # Ubah password roo
     echo ""
