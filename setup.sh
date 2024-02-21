@@ -31,9 +31,11 @@ if [ $(id -u) -eq 0 ]; then
     echo "User kamu sudah root"
     sleep 3
     clear
+    #update & upgrade
+    apt update -y && apt upgrade -y
     #install curl untuk melihat ip vps
     apt install curl -y
-    clear
+    ip vps kamu = $ipvps
     apt install curl -y
     clear
     # Ubah password roo
@@ -61,6 +63,8 @@ ${b}╔════════════════════════�
     sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/g' /etc/ssh/sshd_config
     clear
     #hasil akhir
+    apt install curl -y
+    clear
     echo ""
     echo -e "
 ${b}╔═══════════════════════════════════════════════╗
