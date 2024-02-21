@@ -31,17 +31,13 @@ if [ $(id -u) -eq 0 ]; then
     echo "User kamu sudah root"
     sleep 3
     clear
+    #update & upgrade dulu
+    apt update -y && apt upgrade -y
+    clear
     #install curl untuk melihat ip vps
-install_curl() {
-    if ! command -v curl &> /dev/null
-    then
-        echo "Curl belum terinstal. Menginstal curl..."
-        sudo apt update
-        sudo apt install -y curl
-        echo "Curl telah berhasil diinstal."
-    else
-        echo "Curl sudah terinstal."
-    fi
+    sudo apt install curl -y
+    clear
+    echo "Curl telah berhasil diinstal."
 }
     clear
     # Ubah password roo
