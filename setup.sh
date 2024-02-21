@@ -74,6 +74,6 @@ ${b}╚════════════════════════�
     rm -rf setup.sh
 else
     clear
-    echo -e "${org}User kamu bukan root ${nc}silahkan ketik ${h}sudo su"
+    echo -e "${org}User kamu bukan root ${nc}silahkan ketik ${h}sudo su${nc}"
     rm -rf setup.sh
 fi
